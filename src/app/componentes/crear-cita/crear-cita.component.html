@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center mb-2 rounded">Agregar Cita</h5>
+      
+        <div class="text-center" *ngIf="formularioIncorrecto">
+            <span class=" bg-danger  p-1 text-white">Todo los campos son obligatorios</span>
+        </div>
+   
+    <div class="form-group mb-3">
+        <label for="nombre">Paciente</label>
+        <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" placeholder="Ingrese tu nombre">
+    </div>
+    <div class="form-group mb-3">
+        <label for="nombre">Fecha</label>
+        <input type="date" id="nombre"  name="fecha"  class="form-control" [(ngModel)]="fecha"  placeholder="Ingrese tu nombre">
+    </div>
+    <div class="form-group mb-3">
+        <label for="hora">Hora</label>
+        <input type="time" id="hora" name="horas" class="form-control" [(ngModel)]="horas" placeholder="Ingrese tu nombre">
+    </div>
+    <!--ahora la vaiable sitomas coge toda la informaicon que se escriba a travbes de la direcia ngMoel-->
+    <div class="form-group mb-3">
+        <label for="sintomas">Sintomas</label>
+        <textarea id="sintomas" class="form-control" rows="3"  name="sintomas"  [(ngModel)]="sintomas" placeholder="Ingrese los sintomas"></textarea>
+    </div>
+    <button style="width:100% ;"
+    class="btn btn-primary btn-blocks"
+    (click)="enviarCita()"
+    >Agregar</button>
+
+</div>
+</div>
